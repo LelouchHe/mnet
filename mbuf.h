@@ -1,5 +1,5 @@
-#ifndef _MNET_MBUF_H
-#define _MNET_MBUF_H
+#ifndef MNET_MBUF_H
+#define MNET_MBUF_H
 
 #ifdef __cplusplus
 extern "C" {

@@ -30,7 +30,7 @@ int main()
     for (i = 1; i < 20; i++)
         mtp_run(mtp, fun, i);
 
-    mtp_start(mtp, 2);
+    mtp_start(mtp, 4);
 
     sleep(30);
 

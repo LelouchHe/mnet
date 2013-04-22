@@ -218,10 +218,19 @@ int mb_retrieve(struct mbuf_t *mb, char *data, int *size)
         // 因为data_size保证了可读取的大小
         if (bn->read == bn->write)
         {
-            mb->read_buf = mb->read_buf->next;
-            bn->next = mb->free_buf;
-            mb->free_buf = bn;
-            bn = mb->read_buf;
+            // 最后一个缓冲区,不需要free缓冲,直接重置即可
+            if (mb->read_buf == mb->write_buf)
+            {
+                bn->read = 0;
+                bn->write = 0;
+            }
+            else
+            {
+                mb->read_buf = mb->read_buf->next;
+                bn->next = mb->free_buf;
+                mb->free_buf = bn;
+                bn = mb->read_buf;
+            }
         }
     }
 

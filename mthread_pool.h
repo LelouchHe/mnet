@@ -1,5 +1,5 @@
-#ifndef _MNET_MTHREAD_POOL_H
-#define _MNET_MTHREAD_POOL_H
+#ifndef MNET_MTHREAD_POOL_H
+#define MNET_MTHREAD_POOL_H
 
 #ifdef __cplusplus
 extern "C" {

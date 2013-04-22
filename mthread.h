@@ -1,5 +1,5 @@
-#ifndef _MNET_MTHREAD_H
-#define _MENT_MTHREAD_H
+#ifndef MNET_MTHREAD_H
+#define MENT_MTHREAD_H
 
 #ifdef __cplusplus
 extern "C" {
